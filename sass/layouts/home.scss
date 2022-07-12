@@ -1,0 +1,44 @@
+.about{
+    background-color:$gray-light-1;
+    padding:25rem;
+    margin-top:-20vh;
+}
+
+.features{
+    padding:20rem;
+    background-image: linear-gradient(to right bottom,rgba($primary-color-light, 0.5),
+                        $primary-color),url(../img/nat-4.jpg);
+    background-size:cover;
+    margin-top:-10rem;
+    transform:skewY(-7deg);
+    &>*{
+        transform:skewY(7deg);
+    }
+}
+
+.tours{
+    background-color:$gray-light-1;
+    padding:25rem;
+    margin-top:-20vh;
+}
+
+.reviews{
+    padding:15rem 0;
+    position:relative;
+}
+
+.booking{
+    padding:15rem 0;
+    background-image:linear-gradient(to right bottom, $primary-color-light,$primary-color-dark);
+    .book{
+        padding:10rem;
+        background-image:linear-gradient(105deg,rgba($white,.9) 0%,
+        rgba($white,.9) 50%, 
+        transparent 50%),
+        url(../../img/nat-10.jpg);
+        background-size:100%;
+        border-radius:.3rem;
+        box-shadow:0 1.5rem 4rem rgba($black,.2);
+        height:55rem;
+    }
+}

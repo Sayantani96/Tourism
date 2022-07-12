@@ -1,0 +1,19 @@
+{
+  "name": "natours-starter",
+  "version": "1.0.0",
+  "description": "Tourism Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Tourism"
+  },
+  "author": "Sayantani",
+  "license": "ISC",
+  "dependencies": {
+    "@icon/linea-basic": "^1.0.0-alpha.4",
+    "node-sass": "^7.0.1"
+  }
+}

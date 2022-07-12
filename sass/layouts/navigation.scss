@@ -1,0 +1,123 @@
+.navigations{
+    .nav-toggle{
+        display:none;
+        cursor:pointer;
+    }
+    .nav-label{
+        background-color: $white;
+        height:7rem;
+        width:7rem;
+        border-radius:50%;
+        position:fixed;
+        top:6rem;
+        right:6rem;
+        z-index:2000;
+        box-shadow: 1rem 2rem 3rem rgba($black,.2);
+        text-align:center;
+        cursor:pointer;
+        transition:all .4s;
+    }
+    .navigation-bg{
+        height:6rem;
+        width:6rem;
+        border-radius:50%;
+        background-image:radial-gradient($primary-color-light,$primary-color-dark);
+        position:fixed;
+        top:6.5rem;
+        right:6.5rem;
+        z-index:1000;
+        transition:all .8s cubic-bezier(0.86,0,0.07,1);
+        cursor:pointer;
+    }
+    .nav-header{
+        width:0;
+        height:100vh;
+        position:fixed;
+        top:0;
+        right:0;
+        z-index:1500;
+        opacity:0;
+        .nav-list{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            list-style:none;
+            text-align:center;
+            transition:all 1.2s;
+        }
+    }
+    .nav-item{
+        margin:1rem;
+    }
+    .nav-link{
+        &:link,&:visited{
+            font-size:3rem;
+            text-transform: uppercase;
+            color:$white;
+            text-decoration: none;
+            font-weight:300;
+            background-image: linear-gradient(120deg,transparent 0%,transparent 50%,white 50%);
+            padding:1rem 2rem;
+            background-size:250%;
+            transition:all .4s;
+        }
+        &:hover,&:active{
+            background-position: 100%;
+            color:$primary-color;
+        }
+       
+    }
+    .nav-toggle:checked ~ .navigation-bg{
+                transform: scale(80);
+    }
+    .nav-toggle:checked ~ .nav-header{
+        opacity: 1;
+        width:100%;
+}
+    .nav-icon{
+        position:relative;
+        margin-top:3.5rem;
+        &,
+        &::before,
+        &::after{
+            width:3rem;
+            height:2px;
+            background-color: $black;
+            display:inline-block;
+        }
+        &::before,&::after{
+            content:"";
+            position:absolute;
+            left:0;
+            transition: all .2s;
+        }
+        &::before{
+            top:-1rem;
+        }
+        &::after{
+            top:1rem;
+        }
+    }
+    .nav-toggle:hover{
+        cursor:pointer;
+    }
+    .nav-label:hover .nav-icon::before{
+        top:-1.2rem;
+    }
+    .nav-label:hover .nav-icon::after{
+        top:1.2rem;
+    }
+    .nav-toggle:checked + .nav-label .nav-icon{
+        background-color: transparent;
+    }
+    .nav-toggle:checked + .nav-label .nav-icon::before{
+        top:0;
+        transform:rotate(45deg);
+    }
+    .nav-toggle:checked + .nav-label .nav-icon::after{
+        top:0;
+       transform: rotate(-45deg);
+    }
+
+}
