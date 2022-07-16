@@ -31,7 +31,7 @@
             display:block;
             transition:all .3s;
         }
-        .form-input:placeholder-shown + .form-label{
+        .form-input:placeholder-shown{
                 opacity:0;
                 transform:translateY(-4rem);
         }
@@ -39,6 +39,13 @@
             width:20%;
             display:inline-block;
             margin-left:4rem;
+            @include respond(tab-port){
+                margin-left:2rem;
+            }
+            @include respond(phone){
+                margin-left:0;
+                margin-right:4rem;
+            }
             
             }
             .radio-label{

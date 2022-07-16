@@ -1,7 +1,7 @@
  /* button*/
  .btn{
    &,&:visited,&:link{
-        text-transform:uppercase;
+    text-transform:uppercase;
     text-decoration:none;
     padding:1.5rem 4rem;
     display:inline-block;
@@ -44,17 +44,19 @@
 .btn-green{
     background-color:$primary-color-dark;
     color:$white;
+    @include respond(tab-port){
+        position:absolute;
+        left:12rem;
+    }
     &::after{
         background-color:$primary-color-dark;
     }
 }
 .btn-animated{
-    animation: moveInButton .5s ease-out .75s;
-    animation-fill-mode: backwards;
-    
+    animation: moveInButton .5s ease-in-out .75s;
+    animation-fill-mode:backwards;
 }
 .btn-text{
-
     transition:all .4s;
     &:link,&:visited{
         color:$primary-color;

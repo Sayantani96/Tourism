@@ -1,13 +1,20 @@
 .row{
     max-width:$grid-row-width;
-    margin:0 auto;
-    
+    margin:0 auto; 
     &:not(:last-child){
         margin-bottom:$gutter-vertical;
+    }
+    @include respond(phone){
+        margin-bottom:0;
     }
     .col-1-of-2{
         float:left;
         width:calc((100%-#{$gutter-horizontal})/2);
+        @include respond(tab-port){
+          float:none;
+          width:100% !important;
+          margin-right:0;
+        }
     }
     .col-1-of-4{
         float:left;
@@ -15,7 +22,12 @@
         &:not(:last-child){
             margin-right:$gutter-horizontal;
         }
-        
+        @include respond(tab-port){
+            float:none;
+            width:100%  !important;
+            margin-right:0;
+            margin-bottom:3.8rem;
+          }
     }
     .col-1-of-3{
         float:left;
@@ -23,6 +35,12 @@
         &:not(:last-child){
             margin-right:$gutter-horizontal;
         }
+        @include respond(tab-port){
+            float:none;
+            width:100%  !important;
+            margin-right:0;
+            margin-bottom:3.8rem;
+          }
     }
     &::after{
         content:"";

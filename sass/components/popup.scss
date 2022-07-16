@@ -39,14 +39,27 @@
     border-radius:5px;
     opacity:0;
     transition: all .4s .2s;
+    @include respond(tab-port){
+      width:95%;
+      height:40vh;
+    }
     .popup-left{
        width:33.333333%;
        float:left;
        display:table-cell;
+       @include respond(tab-port){
+         width:45%;
+       }
        .popup-img{
           display:block;
           width:100%;
           height:25rem;
+          @include respond(tab-port){
+            // padding: 2rem 0;
+            &:not(:last-child){
+               margin-top:20rem;
+            }
+          }
        }
     }
     .popup-right{
@@ -54,6 +67,9 @@
        float:left;
        display:table-cell;
        padding:5rem;
+       @include respond(tab-port){
+         width:55%;
+       }
        .popup-text{
           margin-bottom:3rem;
          //  font-size:1.4rem;
@@ -61,6 +77,11 @@
          column-gap:4rem;
          column-rule:1px solid $gray-light-1;
          hyphens:auto;
+         @include respond(tab-port){
+            column-count:0;
+            column-gap:0;
+            column-rule: 0ch;
+         }
        }
     }
    }
