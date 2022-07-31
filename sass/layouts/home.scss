@@ -46,7 +46,7 @@
         border-radius:.3rem;
         box-shadow:0 1.5rem 4rem rgba($black,.2);
         height:55rem;
-        @include respond(phone){
+        @include respond(tab-port){
             background-image:linear-gradient(100deg,rgba($white,.9) 0%,
             rgba($white,.9) 53%, 
             transparent 50%),

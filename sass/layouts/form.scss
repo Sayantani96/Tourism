@@ -31,7 +31,7 @@
             display:block;
             transition:all .3s;
         }
-        .form-input:placeholder-shown{
+        .form-input:placeholder-shown ~ .form-label{
                 opacity:0;
                 transform:translateY(-4rem);
         }
